@@ -16,11 +16,18 @@
         <div class="logo">
             <img src="img/Minha-Logo-semfundo.png" alt="Logo Bruno Goes" />
         </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav class="menu-header">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobremim.html">Sobre</a></li>
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
                 <li><a href="projetos.html" class="active" aria-current="page">Projetos</a></li>
             </ul>
         </nav>
@@ -43,8 +50,8 @@
                         muito mais.</p>
                     <div class="ferramentas">
                         <ul>
-                            <li><img src="img/icons/java-coffee-cup-32.png" alt="Icone Java"></i> Java</li>
-                            <li><img src="img/icons/postgreesql-32.png" alt="Icone PostgresSQL"></i> PostgresSQL</li>
+                            <li><img src="img/icons/java-coffee-cup-32.png" alt="Ícone Java"> Java</li>
+                            <li><img src="img/icons/postgreesql-32.png" alt="Ícone PostgreSQL"> PostgreSQL</li>
                             <li><img src="img/icons/html-32.png" alt="Icone HTML"> HTML</li>
                             <li><img src="img/icons/css-32.png" alt="Icone Css"> CSS</li>
                         </ul>
@@ -87,7 +94,7 @@
                     <div class="ferramentas">
                         <ul>
                             <li><img src="img/icons/csharp-icon32.png" alt="Icone C#"> C#</li>
-                            <li><img src="img/icons/postgreesql-32.png" alt="Icone PostgresSQL"></i> PostgresSQL</li>
+                            <li><img src="img/icons/postgreesql-32.png" alt="Ícone PostgreSQL"> PostgreSQL</li>
                         </ul>
                     </div>
                     <a href="" class="btn-projeto">Ver Projeto</a>
@@ -104,7 +111,7 @@
                     <div class="ferramentas">
                         <ul>
                             <li><img src="img/icons/csharp-icon32.png" alt="Icone C#"> C#</li>
-                            <li><img src="img/icons/postgreesql-32.png" alt="Icone PostgresSQL"></i> PostgresSQL</li>
+                            <li><img src="img/icons/postgreesql-32.png" alt="Ícone PostgreSQL"> PostgreSQL</li>
                         </ul>
                     </div>
                     <a href="" class="btn-projeto">Ver Projeto</a>
@@ -121,7 +128,7 @@
                     <div class="ferramentas">
                         <ul>
                             <li><img src="img/icons/csharp-icon32.png" alt="Icone C#"> C#</li>
-                            <li><img src="img/icons/postgreesql-32.png" alt="Icone PostgresSQL"></i> PostgresSQL</li>
+                            <li><img src="img/icons/postgreesql-32.png" alt="Ícone PostgreSQL"> PostgreSQL</li>
                         </ul>
                     </div>
                     <a href="" class="btn-projeto">Ver Projeto</a>
@@ -211,11 +218,47 @@
             <p>&copy; 2025 Bruno Goes - Todos os direitos reservados.</p>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/bruunogoes._/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/BrunoGoes-06" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/devbrunogoes" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/bruno-goes-230307266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuHeader = document.querySelector('.menu-header');
+        if (menuToggle && menuHeader) {
+            const updateMenuAccessibility = () => {
+                const mobile = window.matchMedia('(max-width: 768px)').matches;
+                if (mobile) {
+                    const isOpen = menuHeader.classList.contains('is-open');
+                    menuHeader.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+                } else {
+                    menuHeader.classList.remove('is-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuHeader.setAttribute('aria-hidden', 'false');
+                }
+            };
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = menuHeader.classList.toggle('is-open');
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuHeader.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            });
+
+            menuHeader.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (menuHeader.classList.contains('is-open')) {
+                        menuHeader.classList.remove('is-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuHeader.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+
+            window.addEventListener('resize', updateMenuAccessibility);
+            updateMenuAccessibility();
+        }
+    </script>
 </body>
 
 </html>

@@ -16,32 +16,196 @@
         <div class="logo">
             <img src="img/Minha-Logo-semfundo.png" alt="Logotipo pessoal de Bruno Goes">
         </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav class="menu-header">
             <ul>
-                <li><a href="index.html" class="active" aria-current="page">Início</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobremim.html">Sobre</a></li>
+                <li><a href="#inicio" class="active" aria-current="page">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
         </nav>
     </header>
-    <main class="pag" id="pag-index">
-
-        <div class="col-index-e">
-            <img class="avatar" src="img/foto-bruno.png" alt="Retrato de Bruno Goes">
-        </div>
-        <div class="col-index-d">
-            <div class="col-d-titulo">
-                <h1 class="hero-title">Olá, eu sou Bruno Goes</h1>
+    <main class="landing">
+        <section class="hero" id="inicio">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <span class="hero-pill">Disponível para estágio</span>
+                    <h1 class="hero-title">Construo experiências web modernas e acessíveis</h1>
+                    <p class="hero-subtitle">Sou Bruno Goes, desenvolvedor web focado em soluções digitais que conectam negócios a resultados reais.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#contato">Vamos conversar</a>
+                        <a class="btn btn-secondary" href="projetos.html">Ver projetos</a>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li><strong>+10</strong><span>Projetos concluídos</span></li>
+                        <li><strong>3</strong><span>Stacks: web, desktop e mobile</span></li>
+                        <li><strong>4º</strong><span>Semestre em Sistemas para Internet</span></li>
+                    </ul>
+                </div>
+                <figure class="hero-figure">
+                    <img class="avatar" src="img/foto-bruno.png" alt="Retrato de Bruno Goes sorrindo">
+                    <figcaption class="sr-only">Bruno Goes segurando um notebook com expressão confiante.</figcaption>
+                </figure>
             </div>
-            <div class="col-d-text">
-                <p class="hero-subtitle">
-                    Desenvolvedor web focado em resultados, criando soluções digitais que impulsionam o sucesso do seu
-                    produto
-                </p>
-            </div>
+        </section>
 
-        </div>
+        <section class="section section-alt" id="sobre">
+            <div class="container">
+                <div class="section-header section-header-left">
+                    <span class="section-kicker">Quem sou</span>
+                    <h2 class="section-title">Sobre mim</h2>
+                    <p class="section-subtitle">Apaixonado por tecnologia desde cedo, unindo criatividade e método para resolver problemas reais.</p>
+                </div>
+                <div class="about-grid">
+                    <article class="panel">
+                        <p>Olá! Sou <strong>Bruno Aparecido Santos Goes</strong> e tenho 18 anos. A curiosidade em entender como os dispositivos funcionam me levou ao universo da programação e desde então venho me dedicando a criar experiências digitais impactantes.</p>
+                        <p>Minha formação técnica em Desenvolvimento de Sistemas e Administração na ETEC de Jales me deu visão holística: tecnologia aliada a processos eficientes. Atualmente curso <strong>Sistemas para Internet</strong> na FATEC Jales, aprofundando arquiteturas modernas, UX e boas práticas de desenvolvimento.</p>
+                        <p>Busco oportunidades para contribuir em squads ágeis, evoluir como desenvolvedor full stack e entregar projetos bem documentados, acessíveis e prontos para escalar.</p>
+                    </article>
+                    <article class="panel">
+                        <h3 class="panel-title">Linha do tempo</h3>
+                        <ol class="timeline">
+                            <li><span class="timeline-year">2022</span><p>Início do técnico integrado em Desenvolvimento de Sistemas na ETEC Jales.</p></li>
+                            <li><span class="timeline-year">2023</span><p>Curso noturno de Administração para fortalecer visão de negócios e gestão.</p></li>
+                            <li><span class="timeline-year">2024</span><p>Conclusão de Administração (junho) e Desenvolvimento de Sistemas (dezembro).</p></li>
+                            <li><span class="timeline-year">2025</span><p>Ingresso em Sistemas para Internet na FATEC Jales.</p></li>
+                        </ol>
+                        <h3 class="panel-title">Soft skills</h3>
+                        <ul class="tag-list">
+                            <li>Curiosidade constante</li>
+                            <li>Trabalho em equipe</li>
+                            <li>Atenção aos detalhes</li>
+                            <li>Vontade de evoluir</li>
+                        </ul>
+                        <h3 class="panel-title">Hobbies</h3>
+                        <ul class="tag-list">
+                            <li>Jogos eletrônicos</li>
+                            <li>Música e teclado</li>
+                            <li>Futebol</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Stack</span>
+                    <h2 class="section-title">Principais habilidades técnicas</h2>
+                    <p class="section-subtitle">Equilíbrio entre front-end, back-end e processos para entregar produtos completos.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>Front-end</h3>
+                        <ul class="checklist">
+                            <li>HTML5 semântico e acessibilidade</li>
+                            <li>CSS3 moderno (Flexbox, Grid, animações)</li>
+                            <li>JavaScript ES6+ e manipulação de DOM</li>
+                            <li>Design responsivo focado em conversão</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Back-end &amp; Dados</h3>
+                        <ul class="checklist">
+                            <li>Java com Servlets e JSP</li>
+                            <li>Modelagem e consultas em PostgreSQL</li>
+                            <li>Arquitetura MVC e camadas limpas</li>
+                            <li>Integração com APIs REST</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Ferramentas &amp; Processo</h3>
+                        <ul class="checklist">
+                            <li>Versionamento com Git e GitHub</li>
+                            <li>Documentação clara e padronizada</li>
+                            <li>Metodologias ágeis e colaboração</li>
+                            <li>Foco em métricas e resultados</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="servicos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Como posso ajudar</span>
+                    <h2 class="section-title">Transformo ideias em produtos digitais</h2>
+                    <p class="section-subtitle">Do protótipo à entrega final, atuo nas etapas-chave para lançar experiências web eficientes.</p>
+                </div>
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>Landing pages que convertem</h3>
+                        <p>Uso copy focada em valor, visual limpo e métricas para aumentar leads e vendas.</p>
+                        <ul class="checklist">
+                            <li>Pesquisa rápida de público e proposta de valor</li>
+                            <li>Design responsivo e performance otimizada</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Produtos web completos</h3>
+                        <p>Desenvolvimento end-to-end de aplicações web, integrando front e back com banco de dados.</p>
+                        <ul class="checklist">
+                            <li>Arquitetura escalável e bem documentada</li>
+                            <li>Fluxos de dados seguros e consistentes</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h3>Suporte a times ágeis</h3>
+                        <p>Atuo com squads para manter entregas constantes, priorizando clareza e colaboração.</p>
+                        <ul class="checklist">
+                            <li>Comunicação transparente com stakeholders</li>
+                            <li>Automação de rotinas e versionamento</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contato">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Contato</span>
+                    <h2 class="section-title">Vamos conversar?</h2>
+                    <p class="section-subtitle">Preencha o formulário ou me encontre nas redes para falarmos sobre o próximo projeto.</p>
+                </div>
+                <div class="contact-grid">
+                    <article class="panel contact-info">
+                        <h3 class="panel-title">Canais diretos</h3>
+                        <ul class="contact-list">
+                            <li><i class="fa-solid fa-envelope"></i>brunoapgoes123@gmail.com</li>
+                            <li><i class="fa-solid fa-phone"></i>(17) 99639-0848</li>
+                            <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/bruno-goes-230307266/" target="_blank">LinkedIn</a></li>
+                            <li><i class="fa-brands fa-github"></i><a href="https://github.com/devbrunogoes" target="_blank">GitHub</a></li>
+                        </ul>
+                        <p>Resposta garantida em até 24 horas. Vamos construir algo incrível juntos!</p>
+                    </article>
+                    <form class="formcontato panel" action="https://formsubmit.co/brunoapgoes123@gmail.com" method="POST">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome..." minlength="2" required>
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email..." required>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="message" placeholder="Digite a mensagem..." rows="6" required></textarea>
+
+                        <input type="hidden" name="_subject" value="Mensagem via portfólio">
+                        <input type="hidden" name="_captcha" value="false">
+                        <p class="form-note">Ao enviar, você concorda em ser contatado para falarmos sobre projetos e oportunidades.</p>
+                        <button type="submit" class="button-enviar">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-top">
@@ -52,11 +216,47 @@
             <p>&copy; 2025 Bruno Goes - Todos os direitos reservados.</p>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/bruunogoes._/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/BrunoGoes-06" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/devbrunogoes" target="_blank"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/bruno-goes-230307266/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuHeader = document.querySelector('.menu-header');
+        if (menuToggle && menuHeader) {
+            const updateMenuAccessibility = () => {
+                const mobile = window.matchMedia('(max-width: 768px)').matches;
+                if (mobile) {
+                    const isOpen = menuHeader.classList.contains('is-open');
+                    menuHeader.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+                } else {
+                    menuHeader.classList.remove('is-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuHeader.setAttribute('aria-hidden', 'false');
+                }
+            };
+
+            menuToggle.addEventListener('click', () => {
+                const isOpen = menuHeader.classList.toggle('is-open');
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuHeader.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            });
+
+            menuHeader.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    if (menuHeader.classList.contains('is-open')) {
+                        menuHeader.classList.remove('is-open');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuHeader.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+
+            window.addEventListener('resize', updateMenuAccessibility);
+            updateMenuAccessibility();
+        }
+    </script>
 </body>
 
 </html>
